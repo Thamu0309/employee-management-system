@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="{%  static 'css/empms.css' %}">
+</head>
+<body>
+	<div class="login-box">
+  <h2>EMPLOYEE MANAGEMENT SYSTEM</h2>
+  <form method="post">
+      {% csrf_token %}
+    <div class="user-box">
+      <input type="text" name="fname" required="">
+      <label>Full Name</label>
+    </div>
+    <div class="user-box">
+      <input type="text" name="mobno" required="">
+      <label>Mobile Number</label>
+    </div>
+    <div class="user-box">
+      <input type="email" name="email" required="">
+      <label>Email</label>
+    </div>
+    <div class="user-box">
+      <input type="date" name="dob" required="">
+      <label style="padding: 10px 0; position: static;">DATE OF BIRTH</label>
+    </div>
+    <div class="user-box">
+      <input type="text" name="address" required="">
+      <label style="padding: 10px 0; position: static;">Address</label>
+    </div>
+     <div class="user-box">
+      <input type="text" name="exp" required="">
+      <label style="padding: 10px 0; position: static;">Experience</label>
+    </div>
+     <div class="user-box">
+      <input type="text" name="ctc" required="">
+      <label style="padding: 10px 0; position: static;">CTC</label>
+    </div>
+    <a href="#">
+        <button style="background: transparent;">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Submit
+        </button>
+    </a>
+  </form>
+</div>
+</body>
+</html>

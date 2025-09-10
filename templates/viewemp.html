@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View EMPMS</title>
+    <link rel="stylesheet" href="{%  static 'css/viewempss.css' %}">
+</head>
+<body>
+<div class="container">
+<h1>EMPLOYEMENT MANAGEMENT SYSTEM</h1>
+  <table class="rwd-table">
+    <tbody>
+      <tr>
+        <th>Name</th>
+        <th>Mobile Number</th>
+        <th>Email</th>
+        <th>DATE OF BIRTH</th>
+        <th>Address</th>
+        <th>Experience</th>
+        <th>CTC</th>
+      </tr>
+      {% for i in data %}
+      <tr>
+      <td>{{ i.fname }}</td>
+      <td>{{ i.mobno }}</td>
+      <td>{{ i.email }}</td>
+      <td>{{ i.dob }}</td>
+      <td>{{ i.address }}</td>
+      <td>{{ i.exp }}</td>
+      <td>{{ i.ctc }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+</div>
+</body>
+</html>
